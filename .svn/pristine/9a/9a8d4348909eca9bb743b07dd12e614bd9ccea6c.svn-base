@@ -1,0 +1,59 @@
+﻿
+@using XposLIMS.Models
+@using FormMethod = System.Web.Mvc.FormMethod
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+
+<div class="row">
+    <div class="col-md-7">
+        <section id="loginForm" >
+            @using (Html.BeginForm("Login", "Account", 
+                new { ReturnUrl = ViewBag.ReturnUrl }, 
+                FormMethod.Post, 
+                new { @class = "form-horizontal", role = "form", id = "loginform" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div id="div-login-msg">
+                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                    <span id="text-login-msg">Type your username and password.</span>
+                </div>
+               
+
+                <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    @Html.TextBoxFor(m => m.UserName, new {@class = "form-control", placeholder = "UserName"})
+                    @Html.ValidationMessageFor(m => m.UserName, "", new {@class = "text-danger"})
+                </div>
+
+                <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in" class="btn btn-primary"/>
+                    </div>
+                </div>
+                
+            }
+        </section>
+    </div>
+    
+</div>

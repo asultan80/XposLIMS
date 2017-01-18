@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br/>
+
+
+<div>
+    <table style="border: solid 0.5px #6D7B8D; padding: 5px; width: 50%; table-layout: fixed;">
+            <tr style="height: 60px; background-color: #337ab7; color: #FFFFFF; ">
+                <td align="center">
+                    <h2> XposLIMS <sub>V1.0</sub></h2>
+                </td>
+            </tr>
+            <tr style="height: 60px; background-color: #337ab7; color: #FFFFFF; ">
+                <td align="center">
+                    <h3> Laboratory Information Management System</h3>
+                </td>
+            </tr>
+            <tr style="height: 60px; background-color: #337ab7; color: #FFFFFF; ">
+                <td align="right">
+                    <h4> Licensed to ABC</h4>
+                </td>
+            </tr>
+
+        </table>
+</div>

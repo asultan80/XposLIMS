@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Plants</h2>
+
+<div style="width: 300px">
+    <ul class="nav nav-stacked">
+        <li><a href="#" class="btn btn-primary">Dregde #1</a></li>
+        <li><a href="#" class="btn btn-primary">Wet Plant</a></li>
+        <li><a href="#" class="btn btn-primary">Dry Mining</a></li>
+        <li><a href="#" class="btn btn-primary">Transcend</a></li>
+        <li><a href="#" class="btn btn-primary">TRP Wet</a></li>
+        <li><a href="#" class="btn btn-primary">TRP Dry</a></li>
+        <li><a href="#" class="btn btn-primary">FPP</a></li>
+        <li><a href="#" class="btn btn-primary">Dry Mill</a></li>
+        <li><a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary">Return to Lab Clients Menu</a></li>
+    </ul>
+</div>

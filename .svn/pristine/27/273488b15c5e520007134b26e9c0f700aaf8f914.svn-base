@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div style="font-family: inherit;">
+    <style type="text/css">
+        .helper {
+            font-family: Comic Sans Gabriola;
+            height: 300px;
+            width: 300px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: royalblue;
+            -ms-transform: skewY(-25deg); /* IE 9 */
+            -webkit-transform: skewY(-25deg); /* Safari */
+            transform: skewY(-25deg); /* Standard syntax */
+        }
+
+        .fontA {
+            color: maroon;
+            margin: 0;
+            padding-right: 0
+
+        }
+        .fontB {
+            color: black;
+            margin: 0;
+            padding-left: 0
+        }
+
+        .user-form { padding:20px; }
+    </style>
+
+</div>
+
+<form class="helper">
+    <div class="form-group">
+        <h2 style="text-align: center">
+            <label class="fontA">Xpos</label>
+            <label class="fontB">LIMS</label>
+            <sub>V1.0</sub>
+        </h2>
+        <h3 style="height: 60px; background-color: #337ab7; color: #FFFFFF; text-align: center; font-family: 'CopperPlate'"> Laboratory Information Management System</h3>
+        <h4 style="text-align: right"> Licensed to Sierra Rutile Limited</h4>
+    </div>
+</form>

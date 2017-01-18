@@ -1,0 +1,64 @@
+﻿
+<div id="grid"></div>
+<script>
+    $("#grid").kendoGrid({
+        height: 400,
+        columns: [
+            {field: "ModuleID"},
+            {field: "ReportName"},
+            {field: "ReportDescription"},
+            {field: "OrderID"},
+            {field: "Visible"},
+            {field: "DateCreated"},
+            {field: "LastModified"},
+            {command: [ "edit" , "destroy"], width: 180 }
+        ],
+        toolbar: ["create", "excel", "pdf"],
+        dataSource: {
+            type: "aspnetmvc-ajax", 
+            transport: {
+                read: {
+                     url: "Reports_Read"
+                }, 
+				create: { 
+					url: "Reports_Create"
+				},
+				update: { 
+					url: "Reports_Update"
+				},
+				destroy: { 
+					url: "Reports_Destroy"
+				}
+			},
+            schema: {
+                data: "Data",
+                model: {
+                    id: "ReportID",
+					fields: {
+						ReportID: { type: "number"},
+						ModuleID: { type: "number"},
+						ReportName: { type: "string"},
+						ReportDescription: { type: "string"},
+						OrderID: { type: "number"},
+						Visible: { type: "number"},
+						DateCreated: { type: "date"},
+						LastModified: { type: "date"}
+					}
+                }
+            }, 
+			serverPaging: true,
+			serverSorting: true,
+			serverSorting: true,
+        },
+        editable: "popup",
+        selectable: "single row",
+        sortable: {
+            mode: "single"
+        },
+        filterable: { 
+			mode: "row"
+		},
+        scrollable: true
+    })
+
+</script>

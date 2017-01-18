@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="fontD" align="center" style="color:maroon">
+    <h2>Main Menu</h2>
+</div>
+
+<div  style="width: 300px">
+    <ul class="nav nav-stacked">
+        <li><a href="#" class="btn btn-primary">System Settings</a></li>
+        <li><a href="@Url.Action("Index", "LabClient")" class="btn btn-primary">Lab Clients</a></li>
+        <li><a href="#" class="btn btn-primary">Administration</a></li>
+        <li><a href="@Url.Action("Index", "Report")" class="btn btn-primary">Reports</a></li>
+        <li><a href="#" class="btn btn-primary">About LIMS</a></li>
+    </ul>
+</div>

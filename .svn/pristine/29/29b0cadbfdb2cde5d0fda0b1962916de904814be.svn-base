@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div style="padding-left: 100px; padding-top:65px">
+    <div class="xhelper">
+        <div class="fontD" align="center">
+            <img class="img-responsive" alt="application logo" width="195" height="66" src="/Images/XposLIMS_logo.jpg" />
+        </div>
+        <h5 style="font-family: sans-serif; text-align: center">
+            Version 1.0.00
+        </h5>
+        <br />
+
+        <div class="fontC" align="center">
+            <h4 style="text-align: center">
+                 Laboratory Information Management System
+            </h4>
+        </div>
+
+        <div class="fontD" align="right">
+            <img class="img-responsive" src="~/Images/PSL.png" height="60" width="160" alt="Proudly Sierra Leonean" />
+        </div>
+
+        <br />
+        <br />
+
+        <div class="fontD" align="center">
+            <h4 style="text-align: center">
+                Licensed to: Bank One Inc.
+            </h4>
+        </div>
+
+        <div class="x_left"><img class="img-responsive" src="~/Images/InstitutionLogo2.png" alt="SRL" /></div>
+        <div class="x_right"><img class="img-responsive" src="~/Images/xpos_logo.png" alt="Xpos" /></div>
+
+        @*<div>
+            <img class="img-responsive" src="~/Images/InstitutionLogo.png" alt="SRL" />
+        </div>
+        <div>
+            <img class="img-responsive" src="~/Images/xpos_logo.png" alt="Xpos" />
+        </div>*@
+        @*<div class="wrap">
+            <img  class="img-responsive"  src="~/Images/InstitutionLogo.png" alt="SRL"/>
+            <img  class="img-responsive" src="~/Images/xpos_logo.png" alt="Xpos"/>
+        </div>*@
+
+    </div>
+</div>

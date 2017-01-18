@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="fontD" align="center" style="color:maroon">
+    <h2>Lab Clients</h2>
+</div>
+
+
+<div style="width: 300px">
+    <ul class="nav nav-stacked">
+        <li><a href="#" class="btn btn-primary">Geology</a></li>
+        <li><a href="#" class="btn btn-primary">Metallurgy</a></li>
+        <li><a href="@Url.Action("Index", "Plant")" class="btn btn-primary">Plant Operations</a></li>
+        <li><a href="#" class="btn btn-primary">Projects</a></li>
+        <li><a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary">Return to Main Menu</a></li>
+    </ul>
+</div>
+

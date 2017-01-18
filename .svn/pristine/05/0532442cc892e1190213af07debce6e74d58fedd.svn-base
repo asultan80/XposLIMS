@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<style media="screen" type="text/css">
+    .xhelper {
+        height: 400px;
+        width: 400px;
+        border-style: inset;
+        border-width: 2px;
+        border-color: black;
+        -webkit-transform: perspective( 300px ) rotateY( 25deg );
+        -moz-transform: perspective( 300px ) rotateY( 25deg );
+        -ms-transform: perspective( 300px ) rotateY( 25deg );
+        -o-transform: perspective( 300px ) rotateY( 25deg );
+        transform: perspective( 300px ) rotateY( 25deg );
+        }
+
+    .fontA {
+        color: maroon;
+        margin: 0;
+        padding-right: 0;
+        font-family: 'Antic', sans-serif;
+    }
+    .fontB {
+        color: black;
+        margin: 0;
+        padding-left: 0
+    }
+
+    .fontC {
+        color: maroon;
+        margin: 0;
+        font-size: 15px;
+        padding-left: 0;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+
+    .fontD {
+        padding-left: 0;
+        font-family: 'Electrolize', sans-serif;
+    }
+
+    .wrap img {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 10px;
+    }
+
+    .wrap img:nth-of-type(1) {
+        left: 0;
+        height: 80px;
+        width: 80px;
+    }
+
+    .wrap img:nth-of-type(2) {
+        right: 0;
+        height: 80px;
+        width: 90px;
+        padding-right: 5px;
+    }
+  
+</style>
+
+
+<div style="padding-left: 100px; padding-top:50px">
+    <div class="xhelper">
+        <h2 style="text-align: center">
+            <label class="fontA">XposLIMS</label>
+            <label class="fontB">&trade;</label>
+        </h2>
+        <h5 style="font-family: sans-serif; text-align: center">Version 1.0.00</h5>
+        <br />
+        
+
+        <div class="fontC" align="center">
+            <h4 style="height: 30px;  text-align: center; font-family: 'Jura', sans-serif"> Laboratory Information Management System</h4>
+        </div>
+
+        <div class="fontD" align="right">
+            <img src="~/Images/PSL.png" height="60" width="160" alt="Proudly Sierra Leonean" />
+        </div>
+
+        <br />
+        <br />
+
+        <div class="fontD" align="center">
+            <h4 style="text-align: center"> Licensed to: Sierra Rutile Limited</h4>
+        </div>
+
+        <div class="wrap">
+            <img src="~/Images/InstitutionLogo.png" alt="SRL"/>
+            <img src="~/Images/xpos_logo.png" alt="Xpos"/>
+        </div>
+
+    </div>
+</div>

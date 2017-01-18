@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XposLIMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="ReportName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ReportDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Visible" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="LastModified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sampler">
+    <Key>
+      <PropertyRef Name="SamplerID" />
+    </Key>
+    <Property Name="SamplerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDNumb" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SamplerName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LastModified" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="XposLIMSModelStoreContainer">
+    <EntitySet Name="Report" EntityType="Self.Report" Schema="Lab" store:Type="Tables" />
+    <EntitySet Name="Sampler" EntityType="Self.Sampler" Schema="Lab" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

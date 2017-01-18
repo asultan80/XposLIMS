@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="container-fluid" style="background-color: white; width: 100%; overflow: hidden">
+    <a style="color: maroon; font-family: 'Electrolize', sans-serif; float: left;">
+        <h2>LIMS Reporting</h2>
+    </a>
+
+    <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="float: right; margin-top: 20px">
+        Return to Main Menu
+    </a>
+</div>
+
+
+@*<div id="megaStore" >
+    @(Html.Kendo().Menu()
+          .Name("Menu")
+          .Items(items =>
+          {
+              items.Add()
+                  .Text("Products")
+                  .ContentHtmlAttributes(new { style = "background-color: blue; color: white;" })
+                  .Items(children =>
+                  {
+                      children.Add().Text("Furniture")
+                          .Items(innerChildren =>
+                          {
+                              innerChildren.Add().Text("Tables & Chairs");
+                              innerChildren.Add().Text("Sofas");
+                              innerChildren.Add().Text("Occasional Furniture");
+                              innerChildren.Add().Text("Childerns Furniture");
+                              innerChildren.Add().Text("Beds");
+                          });
+
+                      children.Add().Text("Decor")
+                          .Items(innerChildren =>
+                          {
+                              innerChildren.Add().Text("Bed Linen");
+                              innerChildren.Add().Text("Throws");
+                              innerChildren.Add().Text("Curtains & Blinds");
+                              innerChildren.Add().Text("Rugs");
+                              innerChildren.Add().Text("Carpets");
+                          });
+
+                      children.Add().Text("Storage")
+                          .Items(innerChildren =>
+                          {
+                              innerChildren.Add().Text("Wall Shelving");
+                              innerChildren.Add().Text("Kids Storage");
+                              innerChildren.Add().Text("Baskets");
+                              innerChildren.Add().Text("Multimedia Storage");
+                              innerChildren.Add().Text("Floor Shelving");
+                              innerChildren.Add().Text("Toilet Roll Holders");
+                              innerChildren.Add().Text("Storage Jars");
+                              innerChildren.Add().Text("Drawers");
+                              innerChildren.Add().Text("Boxes");
+                          });
+
+                      children.Add().Text("Lights")
+                          .Items(innerChildren =>
+                          {
+                              innerChildren.Add().Text("Ceiling");
+                              innerChildren.Add().Text("Table");
+                              innerChildren.Add().Text("Floor");
+                              innerChildren.Add().Text("Shades");
+                              innerChildren.Add().Text("Wall Lights");
+                              innerChildren.Add().Text("Spotlights");
+                              innerChildren.Add().Text("Push Light");
+                              innerChildren.Add().Text("String Lights");
+                          });
+                  });
+
+
+              items.Add().Text("Blog");
+              items.Add().Text("Company");
+              items.Add().Text("Events");
+              items.Add().Text("News").Enabled(false);
+          })
+          )
+
+</div>*@
+
+@*<style>
+    #megaStore {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: darkblue;
+    }
+    
+    #menu h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+
+    #menu{
+            background-color: darkblue;
+            color: white;
+          }
+
+    #menu li {
+        color: red;
+        background-color: maroon;
+    }
+    #template img {
+        margin: 5px 20px 0 0;
+        float: left;
+    }
+
+    #template {
+        width: 380px;
+    }
+        #template ol {
+            float: left;
+            margin: 0 0 0 30px;
+            padding: 10px 10px 0 10px;
+        }
+
+        #template:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        #template .k-button {
+            float: left;
+            clear: left;
+            margin: 5px 0 5px 12px;
+        }
+</style>*@
+@*@Html.Partial("Dashboard");*@
+

@@ -1,0 +1,8 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hello Reporting</h2>
+@Html.Partial("Dashboard");
+

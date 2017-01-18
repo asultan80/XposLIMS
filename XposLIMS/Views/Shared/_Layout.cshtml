@@ -1,0 +1,72 @@
+﻿@using Forloop.HtmlHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - XposLIMS</title>
+    
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  
+
+    <link href="@Url.Content("~/Content/lims.css")" rel="stylesheet" type="text/css" />
+    	<link href="@Url.Content("~/Content/kendo/2016.3.1028/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2016.3.1028/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+<!-- Links for favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Links for favicon -->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Antic|Electrolize|Julius+Sans+One|Jura" rel="stylesheet">
+    @*font-family: 'Electrolize', sans-serif;
+    font-family: 'Antic', sans-serif;
+    font-family: 'Jura', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;*@
+    <!-- End Google fonts -->
+
+    	<link href="@Url.Content("~/Content/kendo/2016.3.1028/kendo.dataviz.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jquery.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jszip.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.all.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.aspnetmvc.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+</head>
+<body>
+    @if (!Request.IsAuthenticated)
+    {
+        @Html.Partial("LoginModal")
+    }
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="/Images/XposLIMS_logo2.jpg" alt="application logo" width="100" height="50 "/></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Html.RenderScripts()
+</body>
+</html>

@@ -1,0 +1,13 @@
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.OlympicMedalsByNationalTeams.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.Choropleth.PopulationDensity.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ProductSales.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.Dashboard.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ListBoundReport.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.EmployeeSalesSummary.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.SalesOrderDetails.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.SalesByRegionDashboard.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ProductTagReport.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ProductCatalog.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ProductLineSales.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\Telerik.Reporting.Examples.CSharp.ReportCatalog.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Release\CSharp.ReportLibrary.csproj.GenerateResource.Cache

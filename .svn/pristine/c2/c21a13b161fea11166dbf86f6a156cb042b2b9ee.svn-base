@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+<div style="padding-left: 100px; padding-top:65px">
+    <div class="xhelper">
+        <h2 style="text-align: center">
+            <a href="#"><img src="/Images/XposLIMS_logo.jpg" alt="application logo" width="195" height="66" style="align-content: center"/></a>
+        </h2>
+        <h5 style="font-family: sans-serif; text-align: center">
+            Version 1.0.00
+        </h5>
+        <br />
+
+        <div class="fontC" align="center">
+            <h4 style="height: 30px; text-align: center; font-family: 'Jura', sans-serif">
+                 Laboratory Information Management System
+            </h4>
+        </div>
+
+        <div class="fontD" align="right">
+            <img src="~/Images/PSL.png" height="60" width="160" alt="Proudly Sierra Leonean" />
+        </div>
+
+        <br />
+        <br />
+
+        <div class="fontD" align="center">
+            <h4 style="text-align: center">
+                 Licensed to: Lab One Inc
+            </h4>
+        </div>
+
+        <div class="wrap">
+            <img src="~/Images/InstitutionLogo2.png" alt="SRL"/>
+            <img src="~/Images/xpos_logo.png" alt="Xpos"/>
+        </div>
+
+    </div>
+</div>

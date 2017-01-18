@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("head", required: false)
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+        <!--This bundle was moved by the Telerik VS Extensions for compatibility reasons-->
+        @*@Scripts.Render("~/bundles/jquery")*@
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.common.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.default.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.dataviz.default.min.css")" rel="stylesheet" type="text/css" />
+        <script src="https://kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2016.3.914/js/jszip.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2016.3.914/js/kendo.aspnetmvc.min.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Antic|Electrolize|Julius+Sans+One|Jura" rel="stylesheet">
+        <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    </head>
+    <body>
+        @RenderBody()
+    </body>
+</html>

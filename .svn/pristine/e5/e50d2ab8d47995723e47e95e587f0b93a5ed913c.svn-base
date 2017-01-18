@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Main Menu</h2>
+
+<style>
+    
+</style>
+
+<div  style="width: 300px">
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="#" class="btn btn-primary">Laboratory</a></li>
+        <li><a href="#" class="btn btn-primary">Plants</a></li>
+        <li><a href="#" class="btn btn-primary">Geology</a></li>
+        @*<li><a href="#" class="btn btn-primary">Metallurgy</a></li>
+        <li><a href="#" class="btn btn-primary">Mine Planning</a></li>
+        <li><a href="#" class="btn btn-primary">Reports</a></li>*@
+    </ul>
+    <br />
+    @*<button type="button" class="btn btn-primary btn-block">Laboratory</button>
+    <button type="button" class="btn btn-primary btn-block">Plants</button>
+    <button type="button" class="btn btn-primary btn-block">Geology</button>*@
+    <button type="button" class="btn btn-primary btn-block">Metallurgy</button>
+    <button type="button" class="btn btn-primary btn-block">Mine Planning</button>
+    <button type="button" class="btn btn-primary btn-block">Reports</button>
+    <br/>
+    <a href="#" class="btn btn-primary btn-block active" role="button">Anchor</a>
+</div>

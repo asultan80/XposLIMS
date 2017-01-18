@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    <strong>Xpos Management Solutions</strong>
+    393 Bently Drive<br/>
+    Halifax, NS B3S 0C9<br/>
+    <abbr title="Phone">P:</abbr>902.452.6770
+</address>
+
+<address>
+    <strong>Support:</strong> 
+    <a href="mailto:Info@Xposln.com">info@xposln.com</a><br />
+</address>

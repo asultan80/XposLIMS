@@ -1,0 +1,187 @@
+﻿@using Kendo.Mvc.UI.Fluent
+@using Telerik.Reporting.Examples.CSharp
+@using XposLIMS.Models
+
+@model ReportViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutRpt.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@section styles
+{
+    <link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.common.min.css" rel="stylesheet" id="common-css" />
+    <link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.blueopal.min.css" rel="stylesheet" id="skin-css" />
+
+    <style>
+        body {
+            margin: 5px;
+        }
+
+        #reportViewer1 {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 40px;
+            bottom: 5px;
+            overflow: hidden;
+            font-family: Verdana, Arial;
+            clear: both;
+        }
+
+        /*#theme-switcher {
+            float: right;
+            width: 12em;
+            height: 30px;
+        }*/
+    </style>
+}
+
+@Html.AntiForgeryToken()
+
+
+
+@functions{
+    private void addChildren(MenuItemBuilder builder, ReportX item, List<ReportX> items)
+    {
+        var children = items.Where(m => m.ParentID == item.ReportID);
+        var enumerable = children as ReportX[] ?? children.ToArray();
+        if (enumerable.Any())
+        {
+            builder.Items(menuItems =>
+            {
+                foreach (var child in enumerable)
+                {
+                    var menuItem = menuItems.Add()
+                        .Text(child.ReportDescription)
+                        .Action("ReportName", "Report", new { id = child.ReportName});
+                    addChildren(menuItem, child, items);
+                }
+            });
+        }
+    }
+
+
+}
+
+<div id="megaStore">
+    @(Html.Kendo().Menu()
+          .Name("menu")
+          .Items(menu =>
+          {
+              var pList = @Model.reports.Where(m => m.ParentID == null).ToList();
+              var cList = @Model.reports.Where(m => m.ParentID != null).ToList();
+              if (pList.Count > 0)
+              {
+                  foreach (var pitem in pList)
+                  {
+                      var builder = menu.Add().Text(pitem.ReportDescription);
+                      addChildren(builder, pitem, cList);
+                  }
+              }
+          }))
+</div>
+
+@(Html.TelerikReporting().ReportViewer()
+        // Each report viewer must have an id - it will be used by the initialization script
+        // to find the element and initialize the report viewer.
+        .Id("reportViewer1")
+        // The URL of the service which will serve reports.
+        // The URL corresponds to the name of the controller class (ReportsController).
+        // For more information on how to configure the service please check http://www.telerik.com/help/reporting/telerik-reporting-rest-conception.html.
+        .ServiceUrl(Url.Content("~/api/reports/"))
+        // The URL for the report viewer template. The template can be edited -
+        // new functionalities can be added and unneeded ones can be removed.
+        // For more information please check http://www.telerik.com/help/reporting/html5-report-viewer-templates.html.
+        //
+        // Strongly typed ReportSource - TypeReportSource or UriReportSource.
+        .ReportSource(new TypeReportSource() { TypeName = typeof(ReportCatalog).AssemblyQualifiedName })
+        // Specifies whether the viewer is in interactive or print preview mode.
+        // PrintPreview - Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+        // Interactive - Displays the report in its original width and height with no paging. Additionally interactivity is enabled.
+        .ViewMode(ViewMode.Interactive)
+        // Sets the scale mode of the viewer.
+        // Three modes exist currently:
+        // FitPage - The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+        // FitPageWidth - The report will be zoomed in or out so that the width of the screen and the width of the report match.
+        // Specific - Uses the scale to zoom in and out the report.
+        .ScaleMode(ScaleMode.Specific)
+        // Zoom in and out the report using the scale
+        // 1.0 is equal to 100%, i.e. the original size of the report
+        .Scale(1.0)
+        // Sets whether the viewer’s client session to be persisted between the page’s refreshes(ex. postback).
+        // The session is stored in the browser’s sessionStorage and is available for the duration of the page session.
+        .PersistSession(false)
+        // Sets the print mode of the viewer.
+        .PrintMode(PrintMode.AutoSelect)
+        // Defers the script initialization statement. Check the scripts section below -
+        // each deferred script will be rendered at the place of TelerikReporting().DeferredScripts().
+        .Deferred()
+)
+
+@section scripts
+{
+    <!--kendo.all.min.js can be used as well kendo.web.min.js and kendo.mobile.min.js-->
+    @*<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>*@
+    
+    <script src="@Url.Content("~/ReportViewer/js/telerikReportViewer-10.2.16.1025.js")"></script>
+    <script src="@Url.Content("~/ReportViewer/js/kendo.subset.2015.3.930.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.aspnetmvc.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+
+
+
+
+    @(
+
+            // All deferred initialization statements will be rendered here
+            Html.TelerikReporting().DeferredScripts()
+    )
+}
+
+<style>
+    #megaStore {
+        max-width: 600px;
+        margin: 0px auto;
+        background-color: transparent;
+    }
+
+    #menu h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+    #template img {
+        margin: 5px 20px 0 0;
+        float: left;
+    }
+
+    #template {
+        width: 380px;
+    }
+    #template ol {
+        float: left;
+        margin: 0 0 0 30px;
+        padding: 10px 10px 0 10px;
+    }
+
+    #template:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #template .k-button {
+        float: left;
+        clear: left;
+        margin: 5px 0 5px 12px;
+    }
+</style>
+  
+

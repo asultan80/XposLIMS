@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul class="topnav" id="myTopnav">
+    <li><a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary">Return to Main Menu</a></li>
+    <li class="icon">
+        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li>
+</ul>
+@*<div class="panel panel-default">
+    <div class="panel-heading">
+        <div>
+            <h2 class="panel-title">LIMS Reporting</h2>
+            <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="right: 0">Return to Main Menu</a>
+        </div>
+    </div>
+    <div class="panel-body" style="padding: 0; border: 0px; height: 450px; overflow-y: auto">
+        <ul class="topnav" id="myTopnav">
+            <li><a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="right: 0">Return to Main Menu</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            </li>
+        </ul>
+    </div>
+</div>*@
+
+<h2>LIMS Reporting</h2>
+@Html.Partial("Dashboard");
+

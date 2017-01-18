@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XposLIMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ReportX">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="ReportName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ReportDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Visible" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="LastModified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sampler">
+    <Key>
+      <PropertyRef Name="SamplerID" />
+    </Key>
+    <Property Name="SamplerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDNumb" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SamplerName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LastModified" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_ReportX_ReportX_ParentID">
+    <End Role="ReportX" Type="Self.ReportX" Multiplicity="0..1" />
+    <End Role="ReportX1" Type="Self.ReportX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReportX">
+        <PropertyRef Name="ReportID" />
+      </Principal>
+      <Dependent Role="ReportX1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="XposLIMSModelStoreContainer">
+    <EntitySet Name="ReportX" EntityType="Self.ReportX" Schema="Lab" store:Type="Tables" />
+    <EntitySet Name="Sampler" EntityType="Self.Sampler" Schema="Lab" store:Type="Tables" />
+    <AssociationSet Name="FK_ReportX_ReportX_ParentID" Association="Self.FK_ReportX_ReportX_ParentID">
+      <End Role="ReportX" EntitySet="ReportX" />
+      <End Role="ReportX1" EntitySet="ReportX" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

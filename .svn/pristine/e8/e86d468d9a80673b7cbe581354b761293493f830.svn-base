@@ -1,0 +1,30 @@
+﻿@model IEnumerable<XposLIMS.Models.Sampler>
+@*@using System.Configuration;*@
+
+@{
+    Layout = "~/Views/Shared/_LayoutDE.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<h2>Samplers</h2>
+
+@(Html.Kendo().Grid<XposLIMS.Models.Sampler>() // Specify the type of the grid
+        .Name("Grid")
+        .BindTo((IEnumerable<XposLIMS.Models.Sampler>)ViewBag.Samplers)
+        .Columns(columns =>
+        {
+            //columns.Bound(model => model.SamplerID);
+            columns.Bound(model => model.IDNumb)
+                .Width(100);
+            columns.Bound(model => model.SamplerName)
+            .Width(200);
+            columns.Bound(model => model.IsActive)
+                .Width(50);
+            //columns.Bound(model => model.DateCreated);
+            //columns.Bound(model => model.LastModified);
+        })
+)
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

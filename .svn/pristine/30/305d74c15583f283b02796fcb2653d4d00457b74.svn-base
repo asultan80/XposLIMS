@@ -1,0 +1,18 @@
+﻿using System.Linq;
+using System.Web.Mvc;
+using XposLIMS.Models;
+
+namespace XposLIMS.Controllers
+{
+    public class ReportController : Controller
+    {
+        // GET: Report
+        private XposLIMSEntities db = new XposLIMSEntities();
+        public ActionResult Index()
+        {
+            IQueryable<Report> reports = db.Reports;
+            ViewData["reports"] = reports;
+            return View(reports);
+        }
+    }
+}

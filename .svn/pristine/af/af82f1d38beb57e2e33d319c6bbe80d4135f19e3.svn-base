@@ -1,0 +1,51 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace XposLIMS.Models
+{
+    using System;
+    // The MetadataTypeAttribute identifies ReportMetadata as the class
+    // that carries additional metadata for the Report class.
+    [MetadataType(typeof(ReportMetadata))]
+    public partial class Report
+    {
+        internal sealed class ReportMetadata
+        {
+            private ReportMetadata()
+            {
+            }
+
+            public int ReportID { get; set; }
+            public int ModuleID { get; set; }
+            public string ReportName { get; set; }
+            public string ReportDescription { get; set; }
+            public int? OrderID { get; set; }
+            public int Visible { get; set; }
+            public DateTime DateCreated { get; set; }
+            public DateTime LastModified { get; set; }
+        }
+
+    }
+
+    [MetadataType(typeof(SamplerMetadata))]
+    public partial class Sampler
+    {
+        internal sealed class SamplerMetadata
+        {
+            private SamplerMetadata() { }
+
+            public int SamplerID { get; set; }
+            [Display(Name = "Sampler's ID")]
+            [StringLength(8, MinimumLength = 3, ErrorMessage = "ID must be between 3 and 8 characters long")]
+            [Required]
+            public string IDNumb { get; set; }
+            [Display(Name = "Sampler's Fullname")]
+            [StringLength(40, MinimumLength = 6, ErrorMessage = "name must be between 6 and 40 characters long")]
+            [Required]
+            public string SamplerName { get; set; }
+            [Display(Name = "Active?")]
+            public bool IsActive { get; set; }
+            public DateTime DateCreated { get; set; }
+            public DateTime LastModified { get; set; }
+        }
+    }
+}

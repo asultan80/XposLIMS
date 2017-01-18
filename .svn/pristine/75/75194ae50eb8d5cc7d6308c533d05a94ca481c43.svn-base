@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.914/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css"/>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Antic|Electrolize|Julius+Sans+One|Jura" rel="stylesheet">
+
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.914/jquery.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.914/jszip.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.914/kendo.all.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.914/kendo.aspnetmvc.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+        
+    </head>
+<body>
+    <div class="page">
+        <header>
+            <div class="container-fluid" style="background-color: white; width: 100%; overflow: hidden">
+                <a style="color: maroon; font-family: 'Electrolize', sans-serif; float:left;">
+                    <h2>Samplers</h2>
+                </a>
+
+                <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="float: right; margin-top: 20px">
+                    Return to Main Menu
+                </a>
+            </div>
+
+            @*@(Html.Kendo().Menu()
+                    .Name("menu")
+                    .Items(menu =>
+                    {
+                        menu.Add().Text("Home").Action("Index", "Home");
+                        menu.Add().Text("About").Action("About", "Home");
+                    }))*@
+        </header>
+        <section id="main">
+            @RenderBody()
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>

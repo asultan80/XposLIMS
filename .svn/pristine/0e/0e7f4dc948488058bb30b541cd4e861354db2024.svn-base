@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container-fluid" style="background-color:white">
+    <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary">Return to Main Menu</a>
+</div>
+
+
+<div class="fontD" align="center" style="color:maroon">
+    <h2>LIMS Reporting</h2>
+</div>
+
+@*@Html.Partial("Dashboard");*@
+

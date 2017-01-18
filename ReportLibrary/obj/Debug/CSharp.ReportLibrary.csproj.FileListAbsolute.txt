@@ -1,0 +1,58 @@
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Resources\world.dbf
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Resources\world.shp
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Choropleth\Resources\world.dbf
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Choropleth\Resources\world.shp
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\CSharp.ReportLibrary.dll.config
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\CSharp.ReportLibrary.dll
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\CSharp.ReportLibrary.pdb
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Telerik.Reporting.dll
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Telerik.Reporting.pdb
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\bin\Debug\Telerik.Reporting.xml
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.OlympicMedalsByNationalTeams.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.BarcodesReport.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Choropleth.PopulationDensity.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductSales.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Dashboard.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ListBoundReport.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.EmployeeSalesSummary.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Invoice.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.SalesOrderDetails.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.SalesByRegionDashboard.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductTagReport.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductCatalog.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductLineSales.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ReportCatalog.resources
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csproj.GenerateResource.Cache
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\CSharp.ReportLibrary.pdb
+C:\Program Files (x86)\Telerik\Reporting R3 2016\Examples\CSharp\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll.licenses
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Resources\world.dbf
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Resources\world.shp
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Choropleth\Resources\world.dbf
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Choropleth\Resources\world.shp
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\CSharp.ReportLibrary.dll.config
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\CSharp.ReportLibrary.dll
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\CSharp.ReportLibrary.pdb
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.dll
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.pdb
+C:\Projects\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.xml
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.OlympicMedalsByNationalTeams.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.BarcodesReport.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Choropleth.PopulationDensity.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductSales.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Dashboard.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ListBoundReport.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.EmployeeSalesSummary.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Invoice.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.SalesOrderDetails.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.SalesByRegionDashboard.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductTagReport.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductCatalog.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ProductLineSales.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.ReportCatalog.resources
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csproj.GenerateResource.Cache
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll.licenses
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.pdb
+C:\Projects\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csprojResolveAssemblyReference.cache

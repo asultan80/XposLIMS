@@ -1,0 +1,70 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #000000 url(/Images/BgOfficeBlack.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: auto !important;
+    min-height:100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#bckgrnd {
+    background: #000000 url(/Images/BgOfficeBlack.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: auto !important;
+    min-height:100%;
+}
+
+#bckgrndnavbar {
+    background: #337ab7;
+}
+
+#textfont {
+    color: white;
+}
+
+/*#navigationbar {
+    width: 855px;
+    margin:0 auto;
+    text-align: center;
+}*/
+
+/*ul {
+    list-style-type: none;
+    color: white;
+}*/
+
+/*.custom > li > a:hover {
+    color: black;
+}*/
+
+ul.nav-pills > li > a:hover {
+    background-color: #FFFFFF;
+    color: #337ab7;
+    font-weight: bold;
+    font-family: 'Bookman Old Style';
+    border-style: inset;
+}

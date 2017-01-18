@@ -1,0 +1,44 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace XposLIMS.Models
+{
+    using System;
+    // The MetadataTypeAttribute identifies ReportMetadata as the class
+    // that carries additional metadata for the Report class.
+    [MetadataType(typeof(ReportMetadata))]
+    public partial class Report
+    {
+        internal sealed class ReportMetadata
+        {
+            private ReportMetadata()
+            {
+            }
+
+            public int ReportID { get; set; }
+            public int ModuleID { get; set; }
+            public string ReportName { get; set; }
+            public string ReportDescription { get; set; }
+            public Nullable<int> OrderID { get; set; }
+            public int Visible { get; set; }
+            public System.DateTime DateCreated { get; set; }
+            public System.DateTime LastModified { get; set; }
+        }
+
+    }
+
+    [MetadataType(typeof(SamplerMetadata))]
+    public partial class Sampler
+    {
+        internal sealed class SamplerMetadata
+        {
+            private SamplerMetadata() { }
+
+            public int SamplerID { get; set; }
+            public string IDNumb { get; set; }
+            public string SamplerName { get; set; }
+            public int IsActive { get; set; }
+            public System.DateTime DateCreated { get; set; }
+            public System.DateTime LastModified { get; set; }
+        }
+    }
+}

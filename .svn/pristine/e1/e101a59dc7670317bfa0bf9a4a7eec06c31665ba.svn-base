@@ -1,0 +1,45 @@
+﻿@model XposLIMS.Models.ViewModelBase
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="@Url.Content("~/Content/lims.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.1028/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/kendo/2016.3.1028/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css"/>
+        
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Antic|Electrolize|Julius+Sans+One|Jura" rel="stylesheet">
+
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jquery.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jszip.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.all.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.aspnetmvc.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+        
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-left"><img src="/Images/XposLIMS_logo.png" alt="application logo" width="100" height="50" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <header>
+                <div class="container-fluid" style="background-color: white; width: 100%; overflow: hidden">
+                    <a style="color: maroon; font-family: 'Electrolize', sans-serif; float: left;">
+                        <h2>@Model.ModuleName</h2>
+                    </a>
+
+                    <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="float: right; margin-top: 20px">
+                        Return to Main Menu
+                    </a>
+                </div>
+            </header>
+            <section id="main container-fluid body-content">
+                @RenderBody()
+            </section>
+
+        </div>
+   
+    </body>
+</html>

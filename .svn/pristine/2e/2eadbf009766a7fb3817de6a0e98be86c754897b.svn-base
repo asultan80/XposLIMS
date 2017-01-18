@@ -1,0 +1,74 @@
+﻿@model IEnumerable<XposLIMS.Models.Sampler>
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutDE.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@Html.AntiForgeryToken()
+
+@(Html.Kendo().Grid(Model).Name("samplers")
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Model(model => model.Id(m => m.SamplerID))
+                    .Read(read => read.Action("GetSamplers", "Samplers").Data("sendAntiForgery"))
+                    .Update(up => up.Action("UpdateSampler", "Samplers").Data("sendAntiForgery"))
+                    .Destroy(destroy => destroy.Action("Delete", "Samplers").Data("sendAntiForgery"))
+            )
+
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.IDNumb).Width(50);
+                columns.Bound(p => p.SamplerName).Width(150);
+                columns.Bound(p => p.IsActive).Width(5);
+                columns.Command(cmd =>
+                {
+                    cmd.Edit();
+                    cmd.Destroy();
+                });
+            })
+
+            .Pageable()
+            .Sortable()
+)
+
+
+<script type="text/javascript">
+    function sendAntiForgery() {
+        return { "__RequestVerificationToken": $('input[name=__RequestVerificationToken]').val() }
+    }
+</script>
+
+@*<h2>Samplers</h2>
+@Html.AntiForgeryToken()
+@(Html.Kendo().Grid(Model) 
+        .Name("Grid")
+
+        .HtmlAttributes(new { style = "border: 0;" })
+
+        .BindTo((IEnumerable<XposLIMS.Models.Sampler>)ViewBag.Samplers)
+        .Columns(columns =>
+        {
+            //columns.Bound(model => model.SamplerID);
+            columns.Bound(p => p.IDNumb).Width(5);
+            columns.Bound(p => p.SamplerName).Width(50);
+            columns.Bound(p => p.IsActive).Width(5);
+
+            columns.Command(command =>
+            {
+                command.Edit();
+                command.Destroy();
+            })
+            .Width(200);
+        })
+        .ToolBar(toolbar => toolbar.Create())
+        .Editable(editable => editable.Mode(GridEditMode.InLine))
+        .DataSource(dataSource => dataSource
+        .Server()
+        .Model(model => model.Id(m => m.SamplerID))
+
+        .Create(create => create.Action("Create", "Samplers"))
+        .Update(update => update.Action("Update", "Samplers"))
+        .Destroy(destroy => destroy.Action("Delete", "Samplers"))
+        )*@

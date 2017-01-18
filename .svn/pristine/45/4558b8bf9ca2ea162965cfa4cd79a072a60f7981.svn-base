@@ -1,0 +1,132 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using XposLIMS.Models;
+
+namespace XposLIMS.Controllers
+{
+    public class SamplersController : Controller
+    {
+        private XposLIMSEntities db = new XposLIMSEntities();
+
+        // GET: Samplers
+        public ActionResult Index()
+        {
+            ViewData["samplers"] = db.Samplers.ToList();
+            return View();
+        }
+
+        // GET: Samplers/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Sampler sampler = db.Samplers.Find(id);
+            if (sampler == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sampler);
+        }
+
+        // GET: Samplers/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Samplers/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "IDNumb,SamplerName")] Sampler sampler)
+        {
+            if (ModelState.IsValid)
+            {
+                sampler.DateCreated = DateTime.Now;
+                sampler.LastModified=DateTime.Now;
+                sampler.IsActive = true;
+
+                db.Samplers.Add(sampler);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(sampler);
+        }
+
+        // GET: Samplers/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Sampler sampler = db.Samplers.Find(id);
+            if (sampler == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sampler);
+        }
+
+        // POST: Samplers/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "IDNumb,SamplerName,IsActive")] Sampler sampler)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(sampler).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(sampler);
+        }
+
+        // GET: Samplers/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Sampler sampler = db.Samplers.Find(id);
+            if (sampler == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sampler);
+        }
+
+        // POST: Samplers/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Sampler sampler = db.Samplers.Find(id);
+            db.Samplers.Remove(sampler);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+    }
+}

@@ -1,0 +1,133 @@
+﻿using Kendo.Mvc.Extensions;
+using Kendo.Mvc.UI;
+using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Web.Mvc;
+using XposLIMS.Models;
+
+namespace XposLIMS.Controllers
+{
+    public class ReportsController : Controller
+    {
+        private XposLIMSEntities db = new XposLIMSEntities();
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Reports_Read([DataSourceRequest]DataSourceRequest request)
+        {
+            IQueryable<Report> reports = db.Reports;
+            DataSourceResult result = reports.ToDataSourceResult(request, report => new {
+                ReportID = report.ReportID,
+                ModuleID = report.ModuleID,
+                ReportName = report.ReportName,
+                ReportDescription = report.ReportDescription,
+                OrderID = report.OrderID,
+                Visible = report.Visible,
+                DateCreated = report.DateCreated,
+                LastModified = report.LastModified
+            });
+
+            return Json(result);
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Reports_Create([DataSourceRequest]DataSourceRequest request, Report report)
+        {
+            if (ModelState.IsValid)
+            {
+                var entity = new Report
+                {
+                    ModuleID = report.ModuleID,
+                    ReportName = report.ReportName,
+                    ReportDescription = report.ReportDescription,
+                    OrderID = report.OrderID,
+                    Visible = report.Visible,
+                    DateCreated = report.DateCreated,
+                    LastModified = report.LastModified
+                };
+
+                db.Reports.Add(entity);
+                db.SaveChanges();
+                report.ReportID = entity.ReportID;
+            }
+
+            return Json(new[] { report }.ToDataSourceResult(request, ModelState));
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Reports_Update([DataSourceRequest]DataSourceRequest request, Report report)
+        {
+            if (ModelState.IsValid)
+            {
+                var entity = new Report
+                {
+                    ReportID = report.ReportID,
+                    ModuleID = report.ModuleID,
+                    ReportName = report.ReportName,
+                    ReportDescription = report.ReportDescription,
+                    OrderID = report.OrderID,
+                    Visible = report.Visible,
+                    DateCreated = report.DateCreated,
+                    LastModified = report.LastModified
+                };
+
+                db.Reports.Attach(entity);
+                db.Entry(entity).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+
+            return Json(new[] { report }.ToDataSourceResult(request, ModelState));
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Reports_Destroy([DataSourceRequest]DataSourceRequest request, Report report)
+        {
+            if (ModelState.IsValid)
+            {
+                var entity = new Report
+                {
+                    ReportID = report.ReportID,
+                    ModuleID = report.ModuleID,
+                    ReportName = report.ReportName,
+                    ReportDescription = report.ReportDescription,
+                    OrderID = report.OrderID,
+                    Visible = report.Visible,
+                    DateCreated = report.DateCreated,
+                    LastModified = report.LastModified
+                };
+
+                db.Reports.Attach(entity);
+                db.Reports.Remove(entity);
+                db.SaveChanges();
+            }
+
+            return Json(new[] { report }.ToDataSourceResult(request, ModelState));
+        }
+
+        [HttpPost]
+        public ActionResult Excel_Export_Save(string contentType, string base64, string fileName)
+        {
+            var fileContents = Convert.FromBase64String(base64);
+
+            return File(fileContents, contentType, fileName);
+        }
+    
+        [HttpPost]
+        public ActionResult Pdf_Export_Save(string contentType, string base64, string fileName)
+        {
+            var fileContents = Convert.FromBase64String(base64);
+
+            return File(fileContents, contentType, fileName);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}

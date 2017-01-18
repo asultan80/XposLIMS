@@ -1,0 +1,73 @@
+﻿@model XposLIMS.Models.SamplersViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutDE.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@Html.AntiForgeryToken()
+
+
+
+@(Html.Kendo().Grid<XposLIMS.Models.Sampler>()
+    .Name("grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.SamplerID).Width(50);
+        columns.Bound(p => p.IDNumb).Width(100);
+        columns.Bound(p => p.SamplerName).Width(200);
+        columns.Bound(p => p.IsActive).Width(100);
+        columns.Command(cmd =>
+        {
+            cmd.Edit();
+            cmd.Destroy();
+        }).Title("Commands").Width(200);
+    })
+    .ToolBar(toolbar => toolbar.Create())
+    .Editable(editable => editable.Mode(GridEditMode.InLine))
+    .DataSource(dataSource =>
+        dataSource.Ajax()
+        .Events(events => events.Error("grid_error")) // Handle the "error" event
+        .Model(model =>
+        {
+            model.Id(m => m.SamplerID);
+            model.Field(m => m.SamplerID).Editable(false);
+        })
+        .Create(create => create.Action("Samplers_Create", "Samplers").Data("sendAntiForgery"))
+        .Read(read => read.Action("Samplers_Read", "Samplers").Data("sendAntiForgery"))
+        .Update(up => up.Action("Samplers_Update", "Samplers").Data("sendAntiForgery"))
+        .Destroy(destroy => destroy.Action("Samplers_Destroy", "Samplers").Data("sendAntiForgery"))
+        
+      )
+    .Pageable()
+    .Sortable()
+    .Filterable()
+
+)
+
+
+<script type="text/javascript">
+    function sendAntiForgery() {
+        return { "__RequestVerificationToken": $('input[name=__RequestVerificationToken]').val() }
+    }
+
+    function grid_error(e) {
+        if (e.errors) {
+            var message = "There are some errors:\n";
+            // Create a message containing all errors.
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            // Display the message
+            alert(message);
+            // Cancel the changes
+            var grid = $("#grid").data("kendoGrid");
+            grid.cancelChanges();
+        }
+    }
+</script>
