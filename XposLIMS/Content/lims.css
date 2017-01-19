@@ -12,6 +12,34 @@
     padding-top: 0px;
   }
 
+.navbar-nav.navbar-right .glyphicon-user {
+    color: #fff; 
+    padding-right: 5px
+}
+
+.navbar-nav.navbar-right .username {
+    color: #fff; 
+    padding-right: 5px
+}
+
+.navbar-nav.navbar-right .glyphicon-menu-down {
+    color: rgba(255,255,255,0.6); 
+    padding-right: 20px
+}
+
+.navbar-nav.navbar-right .user-menu {
+    cursor: pointer;
+    box-shadow: none;
+    padding-top: 15px;
+    display: inline-block;
+    padding-right: 60px;
+}
+
+.navbar-nav.navbar-right .user-menu-list i.glyphicon{
+    padding-right: 10px;
+    color: #333;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -201,3 +229,14 @@ textarea {
 
 .x_left{float:left; width:30%;}
 .x_right{float:right; width:30%;}
+
+#loginForm .button-login {
+    margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .navbar-right .dropdown-menu.user-menu-list {
+        right: auto;
+        left: 0;
+    }
+}

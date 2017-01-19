@@ -3,14 +3,25 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
-    </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @*@Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
+                <div class="btn-group">
+                    <span class="dropdown-toggle user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <span class="username">@User.Identity.GetUserName()</span>
+                        <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    </span>
+                    <ul class="dropdown-menu user-menu-list">
+                        <li><a href="/Manage"><i class="glyphicon glyphicon-user"></i>Manage</a></li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()"><i class="glyphicon glyphicon-log-out"></i>Log Out</a></li>
+                    </ul>
+                </div>
+            </li>
+            @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>*@
+        </ul>
     }
 }
 else
