@@ -234,6 +234,31 @@ textarea {
     margin-right: 15px;
 }
 
+/* modals vertical alignment */
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+    padding: 0 10px;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events:all;
+}
+/* end of modals vertical alignment */
+
+
 @media (min-width: 768px) {
     .navbar-right .dropdown-menu.user-menu-list {
         right: auto;
