@@ -10,7 +10,11 @@ namespace XposLIMS.Controllers
 	{
 		public ActionResult Index()
 		{
-			return View();
+            if (Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "MainMenu");
+            }
+            return View();
 		}
 
 		public ActionResult About()

@@ -817,6 +817,7 @@
     <Content Include="ReportViewer\templates\telerikReportViewerTemplate.html" />
     <Content Include="safari-pinned-tab.svg" />
     <Content Include="Scripts\app\LoginModal.0510b.js" />
+    <Content Include="Scripts\global.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2239,6 +2240,7 @@
     <Content Include="Views\Samplers\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDE.cshtml" />
     <Content Include="Views\Shared\_LayoutRpt.cshtml" />
+    <Content Include="Views\Shared\ManageModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

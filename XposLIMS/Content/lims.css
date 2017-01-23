@@ -238,6 +238,8 @@ textarea {
 #loginForm .remeber-me { margin-left: 29px; }
 #loginForm .remeber-me label { padding-left: 0; }
 
+.modal-body { padding: 5px; }
+
 
 /* modals vertical alignment */
 .vertical-alignment-helper {
@@ -262,6 +264,12 @@ textarea {
     pointer-events:all;
 }
 /* end of modals vertical alignment */
+
+/* Manage Modal */
+#ManageLogin iframe {
+    width: 99%;
+    height: 450px;
+}
 
 
 @media (min-width: 768px) {

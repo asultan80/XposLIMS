@@ -7,6 +7,10 @@ namespace XposLIMS.Controllers
         // GET: MainMenu
         public ActionResult Index()
         {
+            if (!Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
     }

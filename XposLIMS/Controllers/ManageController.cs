@@ -72,6 +72,7 @@ namespace XposLIMS.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+            ViewBag.HideTopMenu = true;
             return View(model);
         }
 
@@ -215,6 +216,7 @@ namespace XposLIMS.Controllers
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
         {
+            ViewBag.HideTopMenu = true;
             return View();
         }
 
@@ -290,6 +292,7 @@ namespace XposLIMS.Controllers
             var userLogins = await UserManager.GetLoginsAsync(User.Identity.GetUserId());
             var otherLogins = AuthenticationManager.GetExternalAuthenticationTypes().Where(auth => userLogins.All(ul => auth.AuthenticationType != ul.LoginProvider)).ToList();
             ViewBag.ShowRemoveButton = user.PasswordHash != null || userLogins.Count > 1;
+            ViewBag.HideTopMenu = true;
             return View(new ManageLoginsViewModel
             {
                 CurrentLogins = userLogins,
