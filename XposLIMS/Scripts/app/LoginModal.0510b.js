@@ -6,7 +6,7 @@
         if ($("#loginform").valid()) {
             var username = $("#UserName").val();
             var password = $("#Password").val();
-            var rememberme = $("#RememberMe").val();
+            var rememberme = $("#RememberMe").is(":checked");
             var antiForgeryToken = XposLIMS.Views.Common.getAntiForgeryValue();
 
             XposLIMS.Identity.LoginIntoStd(
