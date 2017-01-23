@@ -231,9 +231,11 @@ textarea {
 .x_right{float:right; width:30%;}
 
 #loginForm .button-login { margin-right: 15px; }
-#loginForm .input-group-addon.user-icon, #loginForm .input-group-addon.lock-icon { border: none; }
+#loginForm .input-group-addon.user-icon, #loginForm .input-group-addon.lock-icon { border: none;position: relative; }
+#loginForm .input-group-addon.user-icon img { position: absolute;top: 5px;left: 0; }
+#loginForm .input-group-addon.lock-icon  img { position: absolute;top: 7px;left: 0; }
 #loginForm #icon-login-msg { background-color: transparent; }
-#loginForm .remeber-me { margin-left: 49px; }
+#loginForm .remeber-me { margin-left: 29px; }
 #loginForm .remeber-me label { padding-left: 0; }
 
 

@@ -69,7 +69,7 @@ function msgFade($msgId, $msgText) {
 
 function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
     var $msgOld = $divTag.text();
-    var $msgShowTime = 2000;
+    var $msgShowTime = 300000;
     msgFade($textTag, $msgText);
     $divTag.addClass($divClass);
     $iconTag.removeClass("glyphicon-chevron-right");
