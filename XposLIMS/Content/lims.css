@@ -271,10 +271,29 @@ textarea {
     height: 450px;
 }
 
+/* loading progress bar */
+.curtain {
+    display: none; 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    z-index: 1031;
+    background: rgba(0, 0, 0, 0.5);
+}
+.progress {
+    width: 50%; 
+    margin: auto;
+}
+
+@media screen and (max-width:667px) {
+    .progress {
+        width: 90%; 
+    }
+}
 
 @media (min-width: 768px) {
     .navbar-right .dropdown-menu.user-menu-list {
         right: auto;
         left: 0;
-    }
+    }    
 }
