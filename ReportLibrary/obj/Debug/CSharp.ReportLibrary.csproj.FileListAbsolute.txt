@@ -66,7 +66,6 @@ D:\Programming\Git\XposLIMS\ReportLibrary\bin\Debug\CSharp.ReportLibrary.pdb
 D:\Programming\Git\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.dll
 D:\Programming\Git\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.pdb
 D:\Programming\Git\XposLIMS\ReportLibrary\bin\Debug\Telerik.Reporting.xml
-D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csprojResolveAssemblyReference.cache
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.OlympicMedalsByNationalTeams.resources
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.BarcodesReport.resources
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\Telerik.Reporting.Examples.CSharp.Choropleth.PopulationDensity.resources
@@ -85,3 +84,4 @@ D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csproj.
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll.licenses
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.dll
 D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.pdb
+D:\Programming\Git\XposLIMS\ReportLibrary\obj\Debug\CSharp.ReportLibrary.csprojResolveAssemblyReference.cache

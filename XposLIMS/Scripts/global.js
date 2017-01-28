@@ -19,4 +19,29 @@
     function showLoadingProgressbar() {
         $("#curtain").show();
     }
+
+    $(".open-confirm").confirm();
+
+    function testJsConfirm() {
+        $.confirm({
+            text: "Are you sure you want to delete that comment?",
+            title: "Confirmation required",
+            confirmButton: false,
+            cancelButton: false,
+            closeTimeout: 4000,
+            post: true,
+            confirmButtonClass: "btn-danger",
+            cancelButtonClass: "btn-default",
+            dialogClass: "modal-dialog modal-lg", // Bootstrap classes for large modal
+            confirm: function () {
+                alert("You just confirmed.");
+            },
+            cancel: function () {
+                alert("You cancelled.");
+            }
+
+        });
+    }
+
+
 });

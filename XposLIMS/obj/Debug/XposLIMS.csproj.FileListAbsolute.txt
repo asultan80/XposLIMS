@@ -826,7 +826,6 @@ D:\Programming\Git\XposLIMS\XposLIMS\bin\Telerik.Reporting.dll
 D:\Programming\Git\XposLIMS\XposLIMS\bin\Telerik.ReportViewer.Mvc.dll
 D:\Programming\Git\XposLIMS\XposLIMS\bin\Telerik.ReportViewer.WebForms.dll
 D:\Programming\Git\XposLIMS\XposLIMS\bin\WebGrease.dll
-D:\Programming\Git\XposLIMS\XposLIMS\bin\Microsoft.Web.Infrastructure.dll
 D:\Programming\Git\XposLIMS\XposLIMS\bin\CSharp.ReportLibrary.pdb
 D:\Programming\Git\XposLIMS\XposLIMS\bin\Antlr3.Runtime.pdb
 D:\Programming\Git\XposLIMS\XposLIMS\bin\Forloop.HtmlHelpers.xml
@@ -903,3 +902,4 @@ D:\Programming\Git\XposLIMS\XposLIMS\obj\Debug\XposLIMS.csprojResolveAssemblyRef
 D:\Programming\Git\XposLIMS\XposLIMS\obj\Debug\XposLIMS.dll.licenses
 D:\Programming\Git\XposLIMS\XposLIMS\obj\Debug\XposLIMS.dll
 D:\Programming\Git\XposLIMS\XposLIMS\obj\Debug\XposLIMS.pdb
+D:\Programming\Git\XposLIMS\XposLIMS\bin\Microsoft.Web.Infrastructure.dll

@@ -39,6 +39,7 @@
 	<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.aspnetmvc.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
     <script src="@Url.Content("~/Scripts/global.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.confirm.js")"></script>
 </head>
 <body>
     @if (!Request.IsAuthenticated)
@@ -72,6 +73,14 @@
     <div class="container-fluid body-content">
         @RenderBody()
         @Html.Partial("_LoadingProgressbar")
+        
+        <button class="open-confirm" type="button"
+                data-text="Test confirm button"
+                data-title="Confirm modal with timeout 4 seconds"
+                data-confirm-button="Okay"
+                data-cancel-button="Cancel"
+                data-close-timeout="0"
+                data-modal-icon="/Content/icons/exclamation.png">test confirm</button>       
     </div>
 
     @Scripts.Render("~/bundles/jqueryval")

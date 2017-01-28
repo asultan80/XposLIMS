@@ -438,6 +438,7 @@
     <Content Include="Content\icons\add.png" />
     <Content Include="Content\icons\cancel.png" />
     <Content Include="Content\icons\edit.png" />
+    <Content Include="Content\icons\exclamation.png" />
     <Content Include="Content\icons\ok.png" />
     <Content Include="Content\icons\password.png" />
     <Content Include="Content\icons\save.png" />
@@ -935,6 +936,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.confirm.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
