@@ -289,6 +289,23 @@ textarea {
     .progress {
         width: 90%; 
     }
+
+    .navbar-inverse .navbar-collapse.in {
+        background-color: #fff;
+        border: 1px solid #101010;
+    }
+    .navbar-collapse.in span {
+        color: #333 !important;
+    }
+    .navbar-collapse.in .navbar-nav.navbar-right .user-menu {
+        padding-top: 0;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #333;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
 }
 
 @media (min-width: 768px) {
