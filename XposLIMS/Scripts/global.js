@@ -28,7 +28,7 @@
             title: "Confirmation required",
             confirmButton: false,
             cancelButton: false,
-            closeTimeout: 4000,
+            closeTimeout: 5000,
             post: true,
             confirmButtonClass: "btn-danger",
             cancelButtonClass: "btn-default",
