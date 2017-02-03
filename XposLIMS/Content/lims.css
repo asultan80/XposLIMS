@@ -164,8 +164,7 @@ textarea {
     transform: perspective( 450px ) rotateY( 35deg );
    }
   
-  @media only screen and (max-width:479px) {
-      div.xhelper{ width: 90%;height: 150%;}
+  @media only screen and (max-width:479px) {      
       .wrap img { width: 90%;}
       .fontA { width: 90%;}
       .fontB { width: 90%;}
@@ -297,6 +296,12 @@ textarea {
     .homepage-wrapper {
         padding-left: 0;
         padding-top: 0;
+    }
+
+    div.xhelper {
+        width: 120%;
+        height: 150%;
+        margin-left: 4%;
     }
 
     .progress {
