@@ -96,3 +96,8 @@ div.k-grid .k-grid-update {
 .k-pager-info {
     color: #000;
 }
+
+.k-grid-header th.k-header {
+    border-color: #000 !important;
+    border-bottom: 2px solid #9F9F9F !important;
+}
