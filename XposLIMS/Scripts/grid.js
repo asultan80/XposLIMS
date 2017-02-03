@@ -45,6 +45,7 @@ function grid_confirmDelete(event, obj) {
         title: "Confirmation required",
         confirmButton: "Yes",
         cancelButton: "Cancel",
+        modalIcon: "/Content/icons/exclamation.png",
         closeTimeout: 0,
         post: true,
         confirmButtonClass: "btn-danger",

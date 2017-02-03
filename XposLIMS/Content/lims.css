@@ -7,6 +7,15 @@
     min-height:100%;
 }
 
+.main-body {
+    padding-top: 51px;
+}
+
+.homepage-wrapper {
+    padding-left: 100px;
+    padding-top: 65px;
+}
+
 /* Align logo to top of nav bar*/
 .navbar-brand {
     padding-top: 0px;
@@ -177,19 +186,6 @@ textarea {
         height:10px
     }
 
-  .k-grid table {
-   table-layout: fixed;
-}
-
-.k-grid tbody tr{
-    height: 20px;
-}
-
-.k-grid td{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    
-}
 
 .nav-stacked > li + li:hover, 
 .nav-stacked > li + li:focus{
@@ -286,6 +282,12 @@ textarea {
 }
 
 @media screen and (max-width:667px) {
+
+    .homepage-wrapper {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
     .progress {
         width: 90%; 
     }

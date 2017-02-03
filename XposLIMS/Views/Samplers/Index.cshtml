@@ -2,6 +2,18 @@
 
 @Html.AntiForgeryToken()
 
+<header>
+    <div class="container-fluid" style="background-color: white; width: 100%; overflow: hidden">
+        <a style="color: maroon; font-family: 'Electrolize', sans-serif; float: left;">
+            <h2>@Model.ModuleName</h2>
+        </a>
+
+        <a href="@Url.Action("Index", "MainMenu")" class="btn btn-primary" style="float: right; margin-top: 20px">
+            Return to Main Menu
+        </a>
+    </div>
+</header>
+
 @(Html.Kendo().Grid<XposLIMS.Models.Sampler>()
     .Name("samplers_grid")
 

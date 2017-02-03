@@ -37,3 +37,62 @@ div.k-grid .k-grid-update {
     max-width: 710px;
     margin: 60px auto 0;
 }
+
+.k-grid table {
+    table-layout: fixed;
+    border-bottom: none;
+}
+
+.k-grid tbody tr{
+    height: 20px;
+}
+
+.k-grid td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+.k-header .k-button {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.k-header .k-button:hover,
+.k-header .k-button:focus
+.k-header .k-button.focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}  
+.k-header .k-button:active,
+.k-header .k-button.active {
+  color: #fff !important;
+  background-color: #286090 !important;
+  border-color: #204d74 !important;
+}
+
+.k-header .k-button .k-icon.k-add {
+    display: none;
+}
+
+.k-pager-wrap.k-grid-pager {
+    background-color: #fff;
+    border-top: 1px solid #000;
+}
+
+.k-header.k-grid-top {
+    background-color: #fff !important;
+    border-bottom: 1px solid #000 !important;
+}
+
+.k-grid-header th.k-header {    
+    border-bottom: 2px solid #ccc !important;
+}
+
+.k-grid th .k-link {color: maroon !important;}
+.k-grid th { background-color: #fff; }
+
+.k-pager-info {
+    color: #000;
+}

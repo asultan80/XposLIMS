@@ -70,17 +70,9 @@
             </div>
         </div>
     }
-    <div class="container-fluid body-content">
+    <div class="container-fluid body-content @(Convert.ToBoolean(ViewBag.HideTopMenu) ? "" : "main-body")" >
         @RenderBody()
-        @Html.Partial("_LoadingProgressbar")
-        
-        <button class="open-confirm" type="button"
-                data-text="Test confirm button"
-                data-title="Confirm modal with timeout 4 seconds"
-                data-confirm-button="Okay"
-                data-cancel-button="Cancel"
-                data-close-timeout="0"
-                data-modal-icon="/Content/icons/exclamation.png">test confirm</button>       
+        @Html.Partial("_LoadingProgressbar")                     
     </div>
 
     @Scripts.Render("~/bundles/jqueryval")
