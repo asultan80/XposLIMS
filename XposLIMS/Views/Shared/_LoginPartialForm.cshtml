@@ -39,6 +39,7 @@
                     <span class="input-group-addon lock-icon">
                         <img src="~/Content/icons/password.png" alt="" />
                     </span>
+                    <span id="fakePwdWrapper"></span>
                     @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
                     @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                 </div>
@@ -46,7 +47,7 @@
                 <div style="margin-bottom: 15px" class="input-group">
                     <div class="col-md-offset-2 col-md-12 remeber-me">
                         <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.CheckBoxFor(m => m.RememberMe, new {id = "chkRememberMe"})
                             @Html.LabelFor(m => m.RememberMe)
                         </div>
                     </div>
@@ -72,3 +73,27 @@
     </div>
     
 </div>
+
+    <script>
+        $(document)
+            .ready(function() {
+
+                var tmpPwdInput = '<input id="pwdFakeInput" type="password" style="display: none;"/>';
+                if ($("#chkRememberMe").is(":checked")) {
+                    $("#pwdFakeInput").remove();
+                } else {
+                    $(tmpPwdInput).appendTo($("#fakePwdWrapper"));
+                }
+
+                $("#chkRememberMe")
+                    .on("change",
+                        function() {
+                            if ($(this).is(":checked")) {
+                                $("#pwdFakeInput").remove();
+                            } else {                                
+                                $(tmpPwdInput).appendTo($("#fakePwdWrapper"));
+                            }
+                        });
+            });
+    </script>
+    

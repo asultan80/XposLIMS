@@ -5,13 +5,17 @@
 @model ReportViewModel
 
 @{
+   // Layout = "~/Views/Shared/_LayoutRpt.cshtml";
     ViewBag.Title = "Reports";
 }
-
+@section meta
+{
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+}
 @section styles
 {
-    @*<link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.common.min.css" rel="stylesheet" id="common-css" />
-    <link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.blueopal.min.css" rel="stylesheet" id="skin-css" />*@
+    <link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.common.min.css" rel="stylesheet" id="common-css" />
+    <link href="http://kendo.cdn.telerik.com/2015.3.930/styles/kendo.blueopal.min.css" rel="stylesheet" id="skin-css" />
 
 }
 
@@ -73,6 +77,7 @@
         // For more information please check http://www.telerik.com/help/reporting/html5-report-viewer-templates.html.
         //
         // Strongly typed ReportSource - TypeReportSource or UriReportSource.
+        .TemplateUrl(Url.Content("~/ReportViewer/templates/telerikReportViewerTemplate.html"))
         .ReportSource(new TypeReportSource() { TypeName = typeof(ReportCatalog).AssemblyQualifiedName })
         // Specifies whether the viewer is in interactive or print preview mode.
         // PrintPreview - Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
@@ -104,11 +109,11 @@
     
     <script src="@Url.Content("~/ReportViewer/js/telerikReportViewer-10.2.16.1025.js")"></script>
     <script src="@Url.Content("~/ReportViewer/js/kendo.subset.2015.3.930.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jquery.min.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jquery.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/jszip.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.all.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2016.3.1028/kendo.aspnetmvc.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>*@
 
 
 
