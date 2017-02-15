@@ -30,7 +30,7 @@ div.k-grid .k-grid-update {
 }
 
 .k-grid tbody .k-button {
-    min-width: initial !important;
+    min-width: inherit !important;
 }
 
 #samplers_grid /* or for every grid: .k-widget.k-grid  */ {

@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using XposLIMS.BLL.Attributes;
 using XposLIMS.Models;
 
 namespace XposLIMS.Controllers
@@ -14,7 +15,7 @@ namespace XposLIMS.Controllers
         public ReportController (){}
 
         // GET: Report
-        
+        [NoGuest]
         public ActionResult Index()
         {
             var reports = from m in _db.ReportXes.Where(e=> e.Visible ==1)

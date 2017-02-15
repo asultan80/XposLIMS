@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using XposLIMS.BLL.Attributes;
 using XposLIMS.Models;
 
 namespace XposLIMS.Controllers
@@ -17,6 +18,7 @@ namespace XposLIMS.Controllers
         public SamplersController(){}
 
         // GET: Samplers
+        [NoGuest]
         public ActionResult Index()
         {
             var samplers = from m in _db.Samplers
